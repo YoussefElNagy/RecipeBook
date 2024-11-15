@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Welcome to Nognog's Cookbook",
+                    "Chef Nognog's Kitchen",
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,

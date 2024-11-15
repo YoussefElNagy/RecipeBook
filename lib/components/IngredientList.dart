@@ -17,7 +17,9 @@ class _IngredientListState extends State<IngredientList> {
 
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
-          title: Text("Ingredients"),
+          title: Text("${ingredients['ingreds']['name']}",
+            style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.brown[700]) , ),
+          centerTitle: true,
         ),
         body: Column(
           children: [
@@ -35,7 +37,7 @@ class _IngredientListState extends State<IngredientList> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(ingredients['ingreds']['name'],style: TextStyle(fontSize: 20),),
+                  Text(ingredients['ingreds']['name'],style: TextStyle(fontSize: 16,color: Colors.brown[850]),),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
@@ -54,7 +56,7 @@ class _IngredientListState extends State<IngredientList> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0,vertical: 8),
                     child: ListTile(
-                      title: Text(ingredients['ingreds']['ingredients'][index]),
+                      title: Text(ingredients['ingreds']['ingredients'][index],style: TextStyle(color: Colors.brown[700],fontWeight: FontWeight.w500),),
                     ),
                   ),
                 ),
@@ -74,6 +76,7 @@ class _IngredientListState extends State<IngredientList> {
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
               icon: Icon(Icons.home),
+              color: Colors.brown[700],
               iconSize: 40,
             ),
             IconButton(
@@ -82,6 +85,7 @@ class _IngredientListState extends State<IngredientList> {
               },
               icon: Icon(Icons.food_bank),
               iconSize: 40,
+              color: Colors.brown[700],
             ),
             // Add more icons if needed
           ],

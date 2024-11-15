@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text(widget.title,style: TextStyle(color: Colors.brown[700],fontWeight: FontWeight.bold),),
         centerTitle: true,
         elevation: 0, // Remove shadow for a cleaner look
       ),
@@ -89,6 +89,7 @@ class _HomePageState extends State<HomePage> {
               },
               icon: Icon(Icons.home),
               iconSize: 40,
+              color: Colors.brown[700],
             ),
             IconButton(
               onPressed: () {
@@ -96,6 +97,7 @@ class _HomePageState extends State<HomePage> {
               },
               icon: Icon(Icons.food_bank),
               iconSize: 40,
+              color: Colors.brown[700],
             ),
           ],
         ),
